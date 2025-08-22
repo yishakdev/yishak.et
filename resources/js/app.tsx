@@ -5,8 +5,8 @@ import "../css/app.css";
 
 createInertiaApp({
     resolve: (name) => {
-        const pages = import.meta.glob("./Pages/**/*.tsx", { eager: true });
-        return (pages[`./Pages/${name}.tsx`] as any).default;
+        const pages = import.meta.glob("./pages/**/*.tsx", { eager: true });
+        return (pages[`./pages/${name}.tsx`] as any).default;
     },
     setup({ el, App, props }) {
         const root = createRoot(el as HTMLElement);
